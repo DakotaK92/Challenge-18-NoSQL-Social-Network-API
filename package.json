@@ -1,0 +1,24 @@
+{
+  "name": "challenge-18-nosql-social-network-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DakotaK92/Challenge-18-NoSQL-Social-Network-API.git"
+  },
+  "author": "DakotaK92",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DakotaK92/Challenge-18-NoSQL-Social-Network-API/issues"
+  },
+  "homepage": "https://github.com/DakotaK92/Challenge-18-NoSQL-Social-Network-API#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^7.0.2"
+  }
+}
