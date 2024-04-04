@@ -14,17 +14,12 @@ const reactionSchema = new Schema (
         username: {
             type: String,
             required: true,
-        },
-        createdAt: {
-            type: Date,
-            default: Date.now,
-            get: (createdAtVal) => dateFormat(createdAtVal),
-        },
+        }
     },
     {
         toJSON: {
             getters: true,
-        },
+        }
     }
 );
 
@@ -35,7 +30,7 @@ const thoughtSchema = new Schema(
             required: true,
             maxlength: 280,
         },
-        createdAt: {
+        username: {
             type: String,
             required: true,
         },
@@ -49,6 +44,10 @@ const thoughtSchema = new Schema(
         id: false,
     }
 );
+
+thoughtSchema.virtual('reactionCount').get(function () {
+    return this.reactions.length;
+});
 
 const Thought = model('Thought', thoughtSchema);
 
