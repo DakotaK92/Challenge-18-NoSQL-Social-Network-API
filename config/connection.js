@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
 
-mongoose.connect('mongodb://localhost:27017/challenge18');
+mongoose.connect('mongodb://127.0.0.1:27017/challenge-18');
 
-module.export = mongoose.connection;
+module.exports = mongoose.connection;
