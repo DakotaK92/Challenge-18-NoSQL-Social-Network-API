@@ -1,6 +1,6 @@
 const {Schema, model} = require('mongoose');
 
-const userSchema = new Schema ({
+const userSchema = new Schema({
     username: {
         type: String,
         unique: true,
@@ -10,7 +10,8 @@ const userSchema = new Schema ({
     email: {
         type: String,
         unique: true,
-        required: true
+        required: true,
+        match: [/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/, "Your email was Wrong,please enter a valid email address",]
     },
     thoughts: [
         {
@@ -33,11 +34,11 @@ const userSchema = new Schema ({
 });
 
 // create a virtual call 'friendCount' that retrieves the length of the user's 'friend' array field on query.
-  userSchema.virtual('friendCount'). get(function () {
+userSchema.virtual('friendCount').get(function () {
     return this.friends.length;
 });
 
-// Create the modle user using userSchema
-const User = model("User", userSchema);
+// Create the model user using the userSchema
+const User = model('User', userSchema);
 
-module.exports = User
+module.exports = User;
