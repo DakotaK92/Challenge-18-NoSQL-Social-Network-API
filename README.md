@@ -5,5 +5,5 @@ Using Mongoose and Express, I was tasked with creating and recieving a response 
 + I can also do the same for reactions and friends, but with these, I can add and delete them from my database. My reactions are attached to my thoughts, and my friends are attached to my users.
 + When making this challenge, I thought of it as a social media, where I can make a post and then have some comments on it. And when I have a user, I can see who their friends are and how many they have.
 
-## Video Demonstrations
+## Video Demonstration
 https://github.com/DakotaK92/Challenge-18-NoSQL-Social-Network-API/assets/46942706/8001bc55-de30-41f4-9553-683b4e383e1c
